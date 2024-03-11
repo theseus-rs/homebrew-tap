@@ -4,17 +4,17 @@ class RsqlCli < Formula
   on_macos do
     on_arm do
       url "https://github.com/theseus-rs/rsql/releases/download/v0.1.1/rsql_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "75715ab3c68bcc7f05f613350cb84330deacb0092c7dbe791eac4d9698855afb"
+      sha256 "bbe780683b6a1cb33e4a26ff5455620c0a7d8393c622c46de4a28a2a36e33afd"
     end
     on_intel do
       url "https://github.com/theseus-rs/rsql/releases/download/v0.1.1/rsql_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "d2a910ec36a9134a809434942a8fc4914368c2622a2d3d8a4d2d4db14b8ceb9a"
+      sha256 "f27de8768640dc1c776c6e14c886732374f372fc5a190f3d1f91b46c8ede3cba"
     end
   end
   on_linux do
     on_intel do
       url "https://github.com/theseus-rs/rsql/releases/download/v0.1.1/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "794f291d418fde9ccc7834ec5b1df7bf4a58626f5142fb5f06f5dede3c3e1441"
+      sha256 "bf32b29557b6c8bf93b80f2ab68281d56edf9882d5e8b090cf8579e8234a597c"
     end
   end
   license "Apache-2.0 OR MIT"
