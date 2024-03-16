@@ -1,20 +1,20 @@
 class RsqlCli < Formula
   desc "rsql command line interface for PostgreSQL and SQLite3."
-  version "0.4.1"
+  version "0.4.2"
   on_macos do
     on_arm do
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.4.1/rsql_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "b78c16613ba6ecac64278a0fcbbfd6e56df07f8e2199082a247879729ba93d6f"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.4.2/rsql_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "a95653bf05b9f2d72afca0f0665dee4801d94bcda763921bad23c2324c1a0993"
     end
     on_intel do
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.4.1/rsql_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "2c6ce07a84782a88c6485a492eb57b35de223fbbbc3efacd164b8aaf1a32a8f5"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.4.2/rsql_cli-x86_64-apple-darwin.tar.xz"
+      sha256 "fd2853f6b241e5ec43e358069f83ec1571bc597c6c1f78e2a524df5eefc31e41"
     end
   end
   on_linux do
     on_intel do
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.4.1/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "78858dd096cb6549fe437fe66f965d807a1df7386fd2b859f45710e07788e30a"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.4.2/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "49829192979345360e7c75d31ed895e4c5d389379ce7638b395eb5c8b03ae718"
     end
   end
   license "Apache-2.0 OR MIT"
