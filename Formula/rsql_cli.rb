@@ -1,21 +1,21 @@
 class RsqlCli < Formula
   desc "rsql is a CLI for DuckDB, LibSQL, MariaDB, MySQL, PostgreSQL, SQLite3 and SQL Server."
   homepage "https://github.com/theseus-rs/rsql"
-  version "0.13.4"
+  version "0.13.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.13.4/rsql_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "36b3e9604fdb1e791d9aa77adb9150c367f507e3ce8e03883f25af1c351fb443"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.13.5/rsql_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "aa8e574175fbec29d0641820538124e7f25911b82c062a1a179aeff66961ac41"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.13.4/rsql_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "b73f1adc0345eea8de33626a456312a213cfd4efa128e02db2900bbffb5932ec"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.13.5/rsql_cli-x86_64-apple-darwin.tar.xz"
+      sha256 "9aaa4ac035bf6e43b692cbe8f7a548d295c86cc0dd81517cc88d69b4ecfd14ad"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.13.4/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a3ea1e710fa605185ccf7f40e850f7df78fb5aa56d68afffaab9e73c4e0269e9"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.13.5/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "677b39ad5760fba34761d84c4400948963270ed02c187f8263cf67939ec14663"
     end
   end
   license "Apache-2.0 OR MIT"
