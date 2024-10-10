@@ -5,16 +5,16 @@ class RistrettoCli < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/theseus-rs/ristretto/releases/download/v0.8.0/ristretto_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "42cd073a54a2731d41eeb92b9e3354880d033b5812f7af18486095f20bb69792"
+      sha256 "16a7e2acc362afde40e3039bc70ed24f09f98e56d4b0fd359cd835226c8e0c24"
     end
     if Hardware::CPU.intel?
       url "https://github.com/theseus-rs/ristretto/releases/download/v0.8.0/ristretto_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "9e72a1677677da59bde63ba598d0a883388e3b9290a3e75811c7b55031b4e95b"
+      sha256 "d41d8b56e00da646c1d6adfd6e4c894280de2c9eaf61a7455d5b0161982d0734"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/theseus-rs/ristretto/releases/download/v0.8.0/ristretto_cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "19febfb0654a5fe7b53bf4919cf2f56d112bad3274e4d411587f259be30244ec"
+    sha256 "f1916b03263075028485d479e940f6c7e5b1f19b1c64372f6c445cd631d4747d"
   end
   license any_of: ["Apache-2.0", "MIT"]
 
