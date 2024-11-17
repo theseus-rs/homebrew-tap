@@ -1,20 +1,20 @@
 class RsqlCli < Formula
-  desc "rsql is a CLI for DuckDB, LibSQL, MariaDB, MySQL, PostgreSQL, Redshift, Snowflake, SQLite3 and SQL Server."
+  desc "rsql is a CLI for CockroachDB, DuckDB, LibSQL, MariaDB, MySQL, PostgreSQL, Redshift, Snowflake, SQLite3 and SQL Server."
   homepage "https://theseus-rs.github.io/rsql/rsql_cli/"
-  version "0.14.0"
+  version "0.14.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.14.0/rsql_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "b89d09e88559a8269f1d7daedf9ba5bb4295ec8601699c29c224471bab8a3e66"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.14.1/rsql_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "42b898d0e297da4359407bc855c96041f22764de5dce6668568e64a18d1c5a90"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.14.0/rsql_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "ba9efd151861ba8e6526b7938f6d29795f829eee8a3429d3ab3a5b1c22fefe71"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.14.1/rsql_cli-x86_64-apple-darwin.tar.xz"
+      sha256 "210a8d715046537a9e280c859678bb3d94045fd886015b6a8e2b95366c1982ee"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/theseus-rs/rsql/releases/download/v0.14.0/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "b44d2938d22a965678478a74409375d66fa1e2eab35dbccf55b81c0573f29a78"
+    url "https://github.com/theseus-rs/rsql/releases/download/v0.14.1/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "d7c1a1258f7088423ce693fcec0e982dde0db36805eaddd34aeebb05319c2f64"
   end
   license any_of: ["Apache-2.0", "MIT"]
 
