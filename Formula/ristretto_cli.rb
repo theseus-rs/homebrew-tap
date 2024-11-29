@@ -1,20 +1,20 @@
 class RistrettoCli < Formula
   desc "A Java Virtual Machine (JVM) CLI."
   homepage "https://theseus-rs.github.io/ristretto/ristretto_cli/"
-  version "0.11.1"
+  version "0.12.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.11.1/ristretto_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "efdbb80ee957779f55d786b0b1dd3c23a6edb63d0e989c936f68dc0bac64cec5"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.12.0/ristretto_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "69340ffac14e7b73a502ea6beb3a963654140d080603a237ee7232e74abec5b4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.11.1/ristretto_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "b8fce6ce22e4eaf01c29e372200df6b6c8c364a7a57133926418493052de2797"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.12.0/ristretto_cli-x86_64-apple-darwin.tar.xz"
+      sha256 "c3ee4944bef68f4e14d9c6995218348d25dd379a2bb658183868e18f09627679"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/theseus-rs/ristretto/releases/download/v0.11.1/ristretto_cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "ff23ee630ee8633459bfe4fb05ffaadee9b3ca5cd6dcfee153a4bff0bb7104cb"
+    url "https://github.com/theseus-rs/ristretto/releases/download/v0.12.0/ristretto_cli-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "452ba5badcbb74d4a9fb399e293d84b36ae32c2472dee69a4cf2651f059f4f9e"
   end
   license any_of: ["Apache-2.0", "MIT"]
 
