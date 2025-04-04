@@ -1,30 +1,28 @@
 class RistrettoCli < Formula
   desc "A Java Virtual Machine (JVM) CLI."
   homepage "https://theseus-rs.github.io/ristretto/ristretto_cli/"
-  version "0.15.0"
+  version "0.16.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.15.0/ristretto_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "044ec1c0fbf8c493fca40fd74a4d858c5f6f4b2d8ca9199540525fc91f56562b"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.16.0/ristretto_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "9a39be055b0f8c94d4e13d7aafad015da863a13ab4f515ccbffb00c1b11571b2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.15.0/ristretto_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "c7eec6412d42975c101a85991b05a7022c96120798e98be11ecfed7daa0815cf"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.16.0/ristretto_cli-x86_64-apple-darwin.tar.xz"
+      sha256 "bd6e4d64e1a6a6233daebe76c184ab893e19e759617fabe124cb4f0e7ccbf44c"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/theseus-rs/ristretto/releases/download/v0.15.0/ristretto_cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "3fb8fb4153e7a69d998ae6c8fb5114157b211c75d9e70e25e8616a4638373a89"
+    url "https://github.com/theseus-rs/ristretto/releases/download/v0.16.0/ristretto_cli-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "e2b32e9f3ca7a2c7809baa55dee229adb29c638a8875d16c56d51098ff1f4657"
   end
   license any_of: ["Apache-2.0", "MIT"]
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":              {},
-    "x86_64-apple-darwin":               {},
-    "x86_64-pc-windows-gnu":             {},
-    "x86_64-unknown-linux-gnu":          {},
-    "x86_64-unknown-linux-musl-dynamic": {},
-    "x86_64-unknown-linux-musl-static":  {},
+    "aarch64-apple-darwin":     {},
+    "x86_64-apple-darwin":      {},
+    "x86_64-pc-windows-gnu":    {},
+    "x86_64-unknown-linux-gnu": {},
   }.freeze
 
   def target_triple
