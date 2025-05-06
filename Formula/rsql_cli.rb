@@ -5,16 +5,16 @@ class RsqlCli < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/theseus-rs/rsql/releases/download/v0.18.2/rsql_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "403d62eb967010ae1e569be623076f148a55962d64cdd3418afa838bd7d1e82a"
+      sha256 "cf70db4d7148a44e6fd3b7cf9305e9ea8e949ae50a6c803b169c4e63203e9b71"
     end
     if Hardware::CPU.intel?
       url "https://github.com/theseus-rs/rsql/releases/download/v0.18.2/rsql_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "a2ce438a2f34562b274bc4dab8d014358f7d15b6bd64f4dd12181400e2172aa1"
+      sha256 "e9a10124ba8685d47ebd7d51d9509a0c06186e2bdff7b1754d4d29a852037660"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/theseus-rs/rsql/releases/download/v0.18.2/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "7f193bb472bdc27f3140a11a759e13c77415d1057e399eb5951d0b2f178f6a95"
+    sha256 "9a9d7a1511cdfc25f9d2cb6b54c17b175bb970e4f563b212adf434b5c6734023"
   end
   license any_of: ["Apache-2.0", "MIT"]
 
