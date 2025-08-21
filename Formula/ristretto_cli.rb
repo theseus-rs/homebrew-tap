@@ -1,25 +1,25 @@
 class RistrettoCli < Formula
   desc "A Java Virtual Machine (JVM) CLI."
   homepage "https://theseus-rs.github.io/ristretto/ristretto_cli/"
-  version "0.25.0"
+  version "0.26.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.25.0/ristretto_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "ab11be008ce22b2479ec9cf52d4b8b18a69d4c1d60f521655404b6e7b406d25b"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.26.0/ristretto_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "1eab9ee4b1d733b02b50d2bc2f5a9895a1e0d6a1dc89fca0372ad6b0b4ee37bb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.25.0/ristretto_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "2d7a8f4f7877204f7877e94014395affd48e2a2c326061aa27f1fd9bbaefddc4"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.26.0/ristretto_cli-x86_64-apple-darwin.tar.xz"
+      sha256 "f853d06bc74b660b87bbbe9ac6dbe014de7c6f2566861fb06c6af6c4de90b2ff"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.25.0/ristretto_cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4186f3bc44f6658e10baa2151a78bbb3e2e7312ff54fffc9f7e762df4fec0959"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.26.0/ristretto_cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "34e2a0729373503afb4dca14f36c055930368165d64ee257d90b2f12cd0d4ae7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.25.0/ristretto_cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "bd4f4b6b8ce893ed6e4a9129674dd7342b9fe0e4097de0bd3b758f75b578698b"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.26.0/ristretto_cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9655919559196153d56a01a0f8f5ee46c8a952bfca931d636d5bf5e2e4154d73"
     end
   end
   license any_of: ["Apache-2.0", "MIT"]
