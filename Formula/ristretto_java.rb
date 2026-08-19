@@ -1,25 +1,25 @@
 class RistrettoJava < Formula
   desc "A Java Virtual Machine (JVM) CLI."
   homepage "https://theseus-rs.github.io/ristretto/ristretto_java/"
-  version "0.32.1"
+  version "0.33.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.32.1/ristretto_java-aarch64-apple-darwin.tar.xz"
-      sha256 "d52ee96a59d5bea000fc2e95d6a4688560d613602fdb1355790a48d154839a13"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.33.0/ristretto_java-aarch64-apple-darwin.tar.xz"
+      sha256 "629789d178dd67a0a1653966588302ae5e059d98a14163df35b6f1abea034b5f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.32.1/ristretto_java-x86_64-apple-darwin.tar.xz"
-      sha256 "66711f6adedad1c193fb499cb40cf2833ea33520b709ca7ed15d778beb0f3587"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.33.0/ristretto_java-x86_64-apple-darwin.tar.xz"
+      sha256 "59b15c887fe66f21774fff1cb5cb13f7e2a9fd8fb112f006a23c9171ff2bc4d4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.32.1/ristretto_java-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "651600be8d15fa350a612f884377c51eefd9d7295238e459e26e2bd23cea12a1"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.33.0/ristretto_java-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3052639774089fa4368fb4d08ecd6ff1e84e97a2bafe75ccade294ec34b7bc38"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.32.1/ristretto_java-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cc1a005d177d432ff5fc93d6765157f8f7c134cbc1e78a84fdde55d00fbdb7f2"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.33.0/ristretto_java-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "61b32460e038fccc36c50789e00a9ae9549a414be0ac91ccd9bc04734fc12e6d"
     end
   end
   license any_of: ["Apache-2.0", "MIT"]
@@ -50,10 +50,18 @@ class RistrettoJava < Formula
   end
 
   def install
-    bin.install "java" if OS.mac? && Hardware::CPU.arm?
-    bin.install "java" if OS.mac? && Hardware::CPU.intel?
-    bin.install "java" if OS.linux? && Hardware::CPU.arm?
-    bin.install "java" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "java"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "java"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "java"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "java"
+    end
 
     install_binary_aliases!
 
