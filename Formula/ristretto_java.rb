@@ -1,25 +1,25 @@
 class RistrettoJava < Formula
   desc "A Java Virtual Machine (JVM) CLI."
   homepage "https://theseus-rs.github.io/ristretto/ristretto_java/"
-  version "0.33.0"
+  version "0.34.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.33.0/ristretto_java-aarch64-apple-darwin.tar.xz"
-      sha256 "629789d178dd67a0a1653966588302ae5e059d98a14163df35b6f1abea034b5f"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.34.0/ristretto_java-aarch64-apple-darwin.tar.xz"
+      sha256 "90485015e22c9f1e7f9c9f7ea758f90f965833075f45765e3541418e637722bc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.33.0/ristretto_java-x86_64-apple-darwin.tar.xz"
-      sha256 "59b15c887fe66f21774fff1cb5cb13f7e2a9fd8fb112f006a23c9171ff2bc4d4"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.34.0/ristretto_java-x86_64-apple-darwin.tar.xz"
+      sha256 "28abea7087dd194b00026b6fadb076265f505ecdd2b36d3c94a851fbd1325d62"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.33.0/ristretto_java-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3052639774089fa4368fb4d08ecd6ff1e84e97a2bafe75ccade294ec34b7bc38"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.34.0/ristretto_java-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "39497479ecc2e3c30ff476a43208743af7c5f372399efbbf59630eea16c0733a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/ristretto/releases/download/v0.33.0/ristretto_java-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "61b32460e038fccc36c50789e00a9ae9549a414be0ac91ccd9bc04734fc12e6d"
+      url "https://github.com/theseus-rs/ristretto/releases/download/v0.34.0/ristretto_java-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "16d4d72a0873e728e9ed4f44ca57bd17c063d43d7158e7b7314285f77468b6ce"
     end
   end
   license any_of: ["Apache-2.0", "MIT"]
