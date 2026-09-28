@@ -1,20 +1,20 @@
 class RsqlCli < Formula
-  desc "rsql is a CLI for CockroachDB, DuckDB, LibSQL, MariaDB, MySQL, PostgreSQL, Redshift, ScyllaDB, Snowflake, SQLite3 and SQL Server."
+  desc "rsql is a CLI for CockroachDB, DuckDB, H2, JDBC, MariaDB, MySQL, PostgreSQL, Redshift, ScyllaDB, Snowflake, SQLite3 and SQL Server."
   homepage "https://theseus-rs.github.io/rsql/rsql_cli/"
-  version "0.20.0"
+  version "0.21.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.20.0/rsql_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "664e9815b9d543d996e889855df1f3ff24e1631e7d2d980e019bbdc779e8815e"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.21.0/rsql_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "78dd9bc18f63d4897c95746d58689eb8534377c4e56f36b216f5a0b6bdfe614d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theseus-rs/rsql/releases/download/v0.20.0/rsql_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "14d07f404da0f8b4662cec10b00c86cbbda08833689afa18e5a91115c7ddebce"
+      url "https://github.com/theseus-rs/rsql/releases/download/v0.21.0/rsql_cli-x86_64-apple-darwin.tar.xz"
+      sha256 "9ff0527e694012446e735e4aadac1c5c904e197320cc65e0f9b7a00c36dc7390"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/theseus-rs/rsql/releases/download/v0.20.0/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "3d6e9351a81d8c2cd3d42b2b11a31bfd0cd7716100444f2861855874fed94a26"
+    url "https://github.com/theseus-rs/rsql/releases/download/v0.21.0/rsql_cli-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "79a5807607a5e2e7d6816d6a5ed31182c9f6ff2bf3500d1c35cda621779daf7c"
   end
   license any_of: ["Apache-2.0", "MIT"]
 
@@ -41,9 +41,15 @@ class RsqlCli < Formula
   end
 
   def install
-    bin.install "rsql" if OS.mac? && Hardware::CPU.arm?
-    bin.install "rsql" if OS.mac? && Hardware::CPU.intel?
-    bin.install "rsql" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "rsql"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "rsql"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "rsql"
+    end
 
     install_binary_aliases!
 
